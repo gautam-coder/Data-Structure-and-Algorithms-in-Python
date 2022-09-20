@@ -62,14 +62,14 @@ class singlyLinkedList:
                     self.tail=None
                 else:
                     self.head=self.head.next
-            elif location == 11:
+            elif location ==1:
                 if self.head ==self.tail:
                     self.head=None
                     self.tail=None
                 else:
                     node=self.head
                     index=0
-                    while index<location-1:
+                    while node is not None:
                         if node.next==self.tail:
                             break
                         node=node.next
@@ -98,7 +98,7 @@ for i in range(10):
 sll.insert(10,2)
 sll.traversal()
 sll.search(20)
-sll.delete(11)
+sll.delete(1)
 #sll.deleteAll()
 print([node.value for node in sll])
         
